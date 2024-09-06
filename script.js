@@ -2,9 +2,9 @@ function placeCard(card_img) {
     const placeWhereCardsGo = document.getElementById("cards-placement")
     let newCard = document.createElement("div")
     const ANGLE_VARIATION = 35
-    const PLACEMENT_VARATION = 8
+    const PLACEMENT_VARIATION = 8
     let rotationDegrees = Math.random() > 0.5 ? Math.random() * ANGLE_VARIATION * -1 : Math.random() * ANGLE_VARIATION
-    let transformXY = Math.random() > 0.5 ? Math.random() * PLACEMENT_VARATION * -1 : Math.random() * PLACEMENT_VARATION
+    let transformXY = Math.random() > 0.5 ? Math.random() * PLACEMENT_VARIATION * -1 : Math.random() * PLACEMENT_VARIATION
     newCard.id = "card"
     newCard.innerHTML = `<img src='${card_img}' style="transform:rotate(${rotationDegrees}deg) translate(${transformXY}%, ${transformXY}%); position:absolute;height:50vh">`
     placeWhereCardsGo.append(newCard)
